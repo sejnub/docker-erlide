@@ -1,4 +1,6 @@
-# docker-erlide
+# docker-erlide (Just beginning, nothing useful here by now)
+
+
 Repository for dockerhub
 
 
