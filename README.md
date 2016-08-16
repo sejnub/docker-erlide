@@ -7,13 +7,13 @@ docker build -t docker-erlide .
 
 ## Usage
 ```
-docker run -it -d -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-uni docker-erlide
+docker run -it -d -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix docker-erlide
 ```
 
 You may want to use another volume for your workspace.
 
 ````
-docker run -it -d -e DISPLAY -v ~/erlide-workspace:/root/workspace -v /tmp/.X11-unix:/tmp/.X11-uni docker-erlide
+docker run -it -d -e DISPLAY -v ~/erlide-workspace:/root/workspace -v /tmp/.X11-unix:/tmp/.X11-unix docker-erlide
 ```
 
 ## Used tools
