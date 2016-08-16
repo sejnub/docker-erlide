@@ -57,25 +57,4 @@ sudo apt-get update
 sudo apt-get install erlang <or> sudo apt-get install esl-erlang
 
 
-# Ubuntu VM needs Proxy at different Places
-  export http_proxy=http://hebunjes:gbfubI20@btchttp.btc-ag.com:8080
-  export https_proxy=http://hebunjes:gbfubI20@btchttp.btc-ag.com:8080
-
-- Docker
-  /etc/systemd/system/docker.service.d/http-proxy
-
-- Browser
-  Sytemsteuerung / Netzwerk
-  Im Browser dann auf uses systemwide osä stellen
-
-- apt
-  /etc/apt/apt.conf
-  
-- Für wen?
-  /home/user/.profile  
-  not visible in bash
-
-- GIT
-  git config --global http.proxy $http_proxy
-
 eof  
