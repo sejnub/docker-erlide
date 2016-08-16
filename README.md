@@ -1,10 +1,24 @@
-# docker-erlide (Just beginning, nothing useful here by now)
+# docker-erlide
 
+## Building
+```bash
+docker build -t docker-erlide .
+```
 
-Repository for dockerhub
+## Usage
+```
+docker run -it -d -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-uni docker-erlide
+```
 
+You may want to use another volume for your workspace.
 
-For the VNC-stuff have a look at 
-- https://hub.docker.com/r/epflsti/octave-x11-novnc-docker/~/dockerfile/
-- http://stackoverflow.com/questions/16296753/can-you-run-gui-apps-in-a-docker-container
-- https://blog.jessfraz.com/post/docker-containers-on-the-desktop/
+````
+docker run -it -d -e DISPLAY -v ~/erlide-workspace:/root/workspace -v /tmp/.X11-unix:/tmp/.X11-uni docker-erlide
+```
+
+## Used tools
+
+|Tool|Version|Source|
+|---|---|---|
+|Erlang Base Image | 19.0.3|[Docker Hub](https://hub.docker.com/_/erlang/)|
+|Eclipse IDE (Java Edition) | Neon | [eclipse.org](http://www.eclipse.org/downloads/eclipse-packages/?osType=linux)|
