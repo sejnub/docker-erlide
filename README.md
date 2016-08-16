@@ -1,4 +1,6 @@
-# docker-erlide
+# What is erlide?
+
+See http://erlide.org/
 
 
 ## Usage
