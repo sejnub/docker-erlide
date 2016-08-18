@@ -14,7 +14,7 @@ Keep in mind that this will completely disable xserver access control! Use this 
 xhost +
 ```
 
-You may want to use an additional volume for your workspace.
+You might want to use an additional volume for your workspace.
 ````
 docker run -it -d -e DISPLAY -v ~/erlide-workspace:/root/workspace -v /tmp/.X11-unix:/tmp/.X11-unix sejnub/erlide
 ```
