@@ -4,7 +4,7 @@ See http://erlide.org/
 
 ## Build
 ```bash
-docker build -t docker-erlide .
+docker build -t sejnub/erlide .
 ```
 
 ## Run
