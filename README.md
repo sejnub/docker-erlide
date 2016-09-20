@@ -1,6 +1,6 @@
 # What is erlide?
 
-See http://erlide.org/
+Erlide is an IDE for Erlang, powered by Eclipse. See http://erlide.org/
 
 ## Build
 ```bash
