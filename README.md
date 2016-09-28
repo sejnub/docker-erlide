@@ -10,12 +10,12 @@ docker build -t sejnub/erlide .
 
 ## Run
 ```
-docker run -it -d -e DISPLAY --name erlide -v /tmp/.X11-unix:/tmp/.X11-unix sejnub/erlide
+docker run -d -e DISPLAY --name erlide -v /tmp/.X11-unix:/tmp/.X11-unix sejnub/erlide
 ```
 
 You might want to use an additional volume for your workspace.
 ````
-docker run -it -d -e DISPLAY --name erlide -v ~/erlide-workspace:/root/workspace -v /tmp/.X11-unix:/tmp/.X11-unix sejnub/erlide
+docker run -d -e DISPLAY --name erlide -v ~/erlide-workspace:/root/workspace -v /tmp/.X11-unix:/tmp/.X11-unix sejnub/erlide
 ```
 
 If the container exits immediately you may have to disable xhost access control for local connections.
