@@ -11,7 +11,9 @@ RUN cd /tmp &&  \
 	tar -zxvf eclipse-java-neon-R-linux-gtk-x86_64.tar.gz --directory /opt/
 
 # Install Erlide IDE Features
-RUN echo /opt/eclipse/eclipse -clean -purgeHistory \
+RUN /opt/eclipse/eclipse \ 
+	-clean \
+	-purgeHistory \
 	-application org.eclipse.equinox.p2.director \
 	-noSplash \
 	-repository http://download.erlide.org/update \
