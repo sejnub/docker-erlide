@@ -33,7 +33,7 @@ To open a bash into the running container you can type
 ```
 docker exec -it erlide bash
 ```
-or 
+or since you have an xserver running
 ```
 uxterm -e "docker exec -it erlide bash" &
 ```
