@@ -18,8 +18,13 @@ You might want to use an additional volume for your workspace.
 docker run -it -d -e DISPLAY -v ~/erlide-workspace:/root/workspace -v /tmp/.X11-unix:/tmp/.X11-unix sejnub/erlide
 ```
 
-If the container exits immediately you may have to disable xhost access control.
-Keep in mind that this will completely disable xserver access control! Use this only during development.
+If the container exits immediately you may have to disable xhost access control for local connections.
+```
+xhost +local:
+```
+
+If the container runs remotely you could disable xhost access control for all connections.
+Keep in mind that this will disable xserver access control! Use this only during development.
 ```
 xhost +
 ```
