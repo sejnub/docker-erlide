@@ -19,6 +19,9 @@ RUN /opt/eclipse/eclipse \
 	-repository http://download.erlide.org/update \
 	-installIUs org.erlide.feature.group
 
+# Install mc
+RUN apt-get install -y mc 
+
 CMD /opt/eclipse/eclipse
 
 
