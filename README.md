@@ -10,12 +10,12 @@ docker build -t sejnub/erlide .
 
 ## Run
 ```
-docker run -it -d -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix sejnub/erlide
+docker run -it -d -e DISPLAY --name erlide -v /tmp/.X11-unix:/tmp/.X11-unix sejnub/erlide
 ```
 
 You might want to use an additional volume for your workspace.
 ````
-docker run -it -d -e DISPLAY -v ~/erlide-workspace:/root/workspace -v /tmp/.X11-unix:/tmp/.X11-unix sejnub/erlide
+docker run -it -d -e DISPLAY --name erlide -v ~/erlide-workspace:/root/workspace -v /tmp/.X11-unix:/tmp/.X11-unix sejnub/erlide
 ```
 
 If the container exits immediately you may have to disable xhost access control for local connections.
@@ -28,6 +28,12 @@ Keep in mind that this will disable xserver access control! Use this only during
 ```
 xhost +
 ```
+
+To open a bash into the running container you can type
+```
+docker exec -it erlide bash
+```
+
 
 ## Used tools
 
