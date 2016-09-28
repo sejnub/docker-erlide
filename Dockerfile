@@ -11,7 +11,7 @@ RUN cd /tmp &&  \
 	tar -zxvf eclipse-java-neon-R-linux-gtk-x86_64.tar.gz --directory /opt/
 
 # Install Erlide IDE Features
-RUN /opt/eclipse/eclipse \ 
+RUN /opt/eclipse/eclipse \
 	-clean \
 	-purgeHistory \
 	-application org.eclipse.equinox.p2.director \
