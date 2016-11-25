@@ -23,9 +23,9 @@ RUN /opt/eclipse/eclipse \
 # Install rebar3
 # For Details see https://www.rebar3.org/docs/getting-started
 RUN git clone https://github.com/erlang/rebar3.git
-RUN cd rebar3
-RUN ./bootstrap
-RUN cp rebar3 /usr/local/bin
+RUN cd rebar3   && \
+    ./bootstrap && \
+    cp rebar3 /usr/local/bin
 
 
 # Install mc
