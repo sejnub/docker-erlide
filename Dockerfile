@@ -19,8 +19,18 @@ RUN /opt/eclipse/eclipse \
 	-repository http://download.erlide.org/update \
 	-installIUs org.erlide.feature.group
 
+
+# Install rebar3
+# For Details see https://www.rebar3.org/docs/getting-started
+RUN git clone https://github.com/erlang/rebar3.git
+RUN cd rebar3
+RUN ./bootstrap
+RUN cp rebar3 /usr/local/bin
+
+
 # Install mc
 RUN apt-get install -y mc 
+
 
 CMD /opt/eclipse/eclipse
 
